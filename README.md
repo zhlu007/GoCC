@@ -14,7 +14,13 @@ In Phase 2, GoCC makes the top-K leaders as leaders searching for their neighbor
 In Phase 3, GoCC first allocates a primary group from the perspective of social cost and communication cost to take charge of the tasks. Subsequently, the cooperative groups are needed if the primary group cannot complete the tasks independently. Its MATLAB code can be found in Group_based_Cooperator_Selection.m file.
 
 # Test
-We also provide the experiment setup, including performance metrics, parameter settings, etc. All of them can be found in main.m file. For example, the performance metrics includes Task Coverage, Total Cost, Average Pairwise Communication Cost and Running Time. Besides, four parameters are varied in the tests to simulate different MCTA scenarios, including community size, user scale, task scale, and task threshold.  
+We also provide the experiment setup, including performance metrics, parameter settings, etc. All of them can be found in main.m file. For example, the performance metrics includes Task Coverage, Total Cost, Average Pairwise Communication Cost and Running Time. Besides, four parameters are varied in the tests to simulate different MCTA scenarios, including community size, user scale, task scale, and task threshold. 
+
+<!-- community_size = {'[5,10]','[5,20]','[5,30]','[5,40]','[5,50]'}; 
+user_scale = {'300','400','500','600','700','800','900'}; 
+task_scale = {'5','10','15','20','25'}; 
+task_threshold = {'[3,5]','[3,10]','[3,15]','[3,20]','[3,25]'};
+ -->
 
 # Dataset
 The used dataset is a copy of the Gowalla dataset, i.e., Gowalla_edges.txt, published in http://snap.stanford.edu/data/loc-Gowalla.html
