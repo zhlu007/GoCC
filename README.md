@@ -1,7 +1,7 @@
 # GoCC
 Multiple Cooperative Task Allocation on Group-oriented Cooperative Crowdsensing
 # GoCC Algorithm
-It is an open-source MATLAB code that can be used to handle Group-oriented Cooperative Crowdsensing for Multiple Cooperative Task Allocation, which contains four MATLAB files, namely main.m, Leader_Selector.m, Group_Formation.m and Group_based_Cooperator_Selection.m respectively, and one dataset file, i.e., Gowalla_edges.txt for test.
+It is an open-source MATLAB code that can be used to handle Group-oriented Cooperative Crowdsensing for Multiple Cooperative Task Allocation, which contains four MATLAB files, namely main.m, Leader_Selector.m, Group_Formation.m and Group_based_Cooperator_Selection.m respectively, and one dataset file, i.e., Gowalla_edges.txt, for test.
 # GoCC Overview
 We consider the problem of Multiple Cooperative Task Allocation (MCTA) in social mobile crowdsensing, in which each task requires a specific amount of users to cooperatively accomplish. GoCC (Group-oriented Cooperative Crowdsensing) approach is proposed to solve the MCTA problem. The general framework of GoCC consists of three main phases:
 
