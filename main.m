@@ -19,19 +19,19 @@ task_scale={'5','10','15','20','25'};
 
 user_scale={'300','400','500','600','700','800','900'};
 
-cooperative_scale={'[3,5]','[3,10]','[3,15]','[3,20]','[3,25]'};
+task_threshold={'[3,5]','[3,10]','[3,15]','[3,20]','[3,25]'};
 
-connected_users={'[5,10]','[5,20]','[5,30]','[5,40]','[5,50]'};
+community_size={'[5,10]','[5,20]','[5,30]','[5,40]','[5,50]'};
 
-XLabel_number={connected_users user_scale task_scale cooperative_scale};
+XLabel_number={community_size user_scale task_scale task_threshold};
 
-num_edge=[length(connected_users) 1 1 1];
+num_edge=[length(community_size) 1 1 1];
 
 num_user=[1 length(user_scale) 1 1];
 
 num_task=[1 1 length(task_scale) 1];
 
-num_cooperation=[1 1 1 length(cooperative_scale)];
+num_cooperation=[1 1 1 length(task_threshold)];
 
 for impact_index=1 : length(impact_name)
     
@@ -114,7 +114,7 @@ for impact_index=1 : length(impact_name)
             
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% breaking social ties and generating them randomly %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
             
-            node_range = str2num(connected_users{d});
+            node_range = str2num(community_size{d});
             
             rank_user = randperm(users, users);
             
@@ -250,7 +250,7 @@ for impact_index=1 : length(impact_name)
                         
                     end
 
-                    required_cooperative_index = randi(str2num(cooperative_scale{cindex}), 1, tasks);%the default value of cooperative index is uniformly distributed in [2,5]
+                    required_cooperative_index = randi(str2num(task_threshold{cindex}), 1, tasks);%the default value of cooperative index is uniformly distributed in [2,5]
               
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GoCC Algorithm %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        
                     beta = 0.5;
